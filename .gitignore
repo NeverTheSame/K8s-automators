@@ -1,0 +1,17 @@
+secret
+bash-k8s-depl/EKS/_test.sh
+bash-k8s-depl/manifest/ssh.pem
+bash-k8s-depl/manifest/ssh.ppk
+tf-k8s-depl/secret.yml
+tf-k8s-depl/.idea
+tf-k8s-depl/Examples
+tf-k8s-depl/Temp
+tf-k8s-depl/Main/.terraform.lock.hcl
+tf-k8s-depl/EKS/old
+tf-k8s-depl/EKS/docs
+tf-k8s-depl/EKS/terraform-environments/*
+tf-k8s-depl/EKS/terraform-modules
+tf-k8s-depl/EKS/secret.yml
+tf-k8s-depl/Main/terraform.tfstate.backup
+bash-k8s-depl/K8/azure-voting-app-redis-master
+.DS_Store

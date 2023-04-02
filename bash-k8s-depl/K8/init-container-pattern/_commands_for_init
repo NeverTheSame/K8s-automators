@@ -1,0 +1,7 @@
+# https://medium.com/bb-tutorials-and-thoughts/kubernetes-learn-init-container-pattern-7a757742de6b
+# init 
+kubectl exec -it init-container-demo -- /bin/sh
+apt-get update && apt-get install -y curl
+curl localhost
+
+# Test With Deployment Object

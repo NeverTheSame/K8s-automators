@@ -1,0 +1,3667 @@
+{
+    "kind": "NodeList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": []
+}
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-657694c6f4-gf8sg.1714c1461b138fa7",
+                "namespace": "kube-system",
+                "uid": "06fea840-8370-41a6-bdfb-bd288e7d3667",
+                "resourceVersion": "728779",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-657694c6f4-gf8sg",
+                "uid": "373a1c5a-7ff3-4782-a7f3-ffa50ea9cfb8",
+                "apiVersion": "v1",
+                "resourceVersion": "453"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:44:33Z",
+            "count": 2806,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-657694c6f4-vkgpl.1714c1461b11cccf",
+                "namespace": "kube-system",
+                "uid": "5c80b101-7a62-43b2-b052-1f7d65af4fc0",
+                "resourceVersion": "728780",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-657694c6f4-vkgpl",
+                "uid": "45cfc4c9-4af6-432d-a14c-62244a08bd48",
+                "apiVersion": "v1",
+                "resourceVersion": "452"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:44:33Z",
+            "count": 2807,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": []
+}
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kube-dns",
+                "namespace": "kube-system",
+                "uid": "01e216b5-5394-4e2b-af15-0e6c2f62f2de",
+                "resourceVersion": "1832",
+                "creationTimestamp": "2022-09-12T23:17:07Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "kube-dns",
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "CoreDNS"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"prometheus.io/port\":\"9153\",\"prometheus.io/scrape\":\"true\"},\"labels\":{\"eks.amazonaws.com/component\":\"kube-dns\",\"k8s-app\":\"kube-dns\",\"kubernetes.io/cluster-service\":\"true\",\"kubernetes.io/name\":\"CoreDNS\"},\"name\":\"kube-dns\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"10.100.0.10\",\"ports\":[{\"name\":\"dns\",\"port\":53,\"protocol\":\"UDP\"},{\"name\":\"dns-tcp\",\"port\":53,\"protocol\":\"TCP\"}],\"selector\":{\"k8s-app\":\"kube-dns\"}}}\n",
+                    "prometheus.io/port": "9153",
+                    "prometheus.io/scrape": "true"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "dns",
+                        "protocol": "UDP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "dns-tcp",
+                        "protocol": "TCP",
+                        "port": 53,
+                        "targetPort": 53
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "kube-dns"
+                },
+                "clusterIP": "10.100.0.10",
+                "clusterIPs": [
+                    "10.100.0.10"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "aws-node",
+                "namespace": "kube-system",
+                "uid": "d7a9af55-2d44-426b-bcfd-75aa15c1f35a",
+                "resourceVersion": "1775",
+                "generation": 2,
+                "creationTimestamp": "2022-09-12T23:17:07Z",
+                "labels": {
+                    "k8s-app": "aws-node"
+                },
+                "annotations": {
+                    "deprecated.daemonset.template.generation": "2",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"DaemonSet\",\"metadata\":{\"annotations\":{},\"labels\":{\"k8s-app\":\"aws-node\"},\"name\":\"aws-node\",\"namespace\":\"kube-system\"},\"spec\":{\"selector\":{\"matchLabels\":{\"k8s-app\":\"aws-node\"}},\"template\":{\"metadata\":{\"labels\":{\"k8s-app\":\"aws-node\"}},\"spec\":{\"affinity\":{\"nodeAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":{\"nodeSelectorTerms\":[{\"matchExpressions\":[{\"key\":\"kubernetes.io/os\",\"operator\":\"In\",\"values\":[\"linux\"]},{\"key\":\"kubernetes.io/arch\",\"operator\":\"In\",\"values\":[\"amd64\",\"arm64\"]},{\"key\":\"eks.amazonaws.com/compute-type\",\"operator\":\"NotIn\",\"values\":[\"fargate\"]}]}]}}},\"containers\":[{\"env\":[{\"name\":\"ADDITIONAL_ENI_TAGS\",\"value\":\"{}\"},{\"name\":\"AWS_VPC_CNI_NODE_PORT_SUPPORT\",\"value\":\"true\"},{\"name\":\"AWS_VPC_ENI_MTU\",\"value\":\"9001\"},{\"name\":\"AWS_VPC_K8S_CNI_CONFIGURE_RPFILTER\",\"value\":\"false\"},{\"name\":\"AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG\",\"value\":\"false\"},{\"name\":\"AWS_VPC_K8S_CNI_EXTERNALSNAT\",\"value\":\"false\"},{\"name\":\"AWS_VPC_K8S_CNI_LOGLEVEL\",\"value\":\"DEBUG\"},{\"name\":\"AWS_VPC_K8S_CNI_LOG_FILE\",\"value\":\"/host/var/log/aws-routed-eni/ipamd.log\"},{\"name\":\"AWS_VPC_K8S_CNI_RANDOMIZESNAT\",\"value\":\"prng\"},{\"name\":\"AWS_VPC_K8S_CNI_VETHPREFIX\",\"value\":\"eni\"},{\"name\":\"AWS_VPC_K8S_PLUGIN_LOG_FILE\",\"value\":\"/var/log/aws-routed-eni/plugin.log\"},{\"name\":\"AWS_VPC_K8S_PLUGIN_LOG_LEVEL\",\"value\":\"DEBUG\"},{\"name\":\"DISABLE_INTROSPECTION\",\"value\":\"false\"},{\"name\":\"DISABLE_METRICS\",\"value\":\"false\"},{\"name\":\"DISABLE_NETWORK_RESOURCE_PROVISIONING\",\"value\":\"false\"},{\"name\":\"ENABLE_IPv4\",\"value\":\"true\"},{\"name\":\"ENABLE_IPv6\",\"value\":\"false\"},{\"name\":\"ENABLE_POD_ENI\",\"value\":\"false\"},{\"name\":\"ENABLE_PREFIX_DELEGATION\",\"value\":\"false\"},{\"name\":\"MY_NODE_NAME\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"spec.nodeName\"}}},{\"name\":\"WARM_ENI_TARGET\",\"value\":\"1\"},{\"name\":\"WARM_PREFIX_TARGET\",\"value\":\"1\"}],\"image\":\"602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1\",\"livenessProbe\":{\"exec\":{\"command\":[\"/app/grpc-health-probe\",\"-addr=:50051\",\"-connect-timeout=5s\",\"-rpc-timeout=5s\"]},\"initialDelaySeconds\":60,\"timeoutSeconds\":10},\"name\":\"aws-node\",\"ports\":[{\"containerPort\":61678,\"name\":\"metrics\",\"protocol\":\"TCP\"}],\"readinessProbe\":{\"exec\":{\"command\":[\"/app/grpc-health-probe\",\"-addr=:50051\",\"-connect-timeout=5s\",\"-rpc-timeout=5s\"]},\"initialDelaySeconds\":1,\"timeoutSeconds\":10},\"resources\":{\"requests\":{\"cpu\":\"25m\"}},\"securityContext\":{\"capabilities\":{\"add\":[\"NET_ADMIN\"]}},\"volumeMounts\":[{\"mountPath\":\"/host/opt/cni/bin\",\"name\":\"cni-bin-dir\"},{\"mountPath\":\"/host/etc/cni/net.d\",\"name\":\"cni-net-dir\"},{\"mountPath\":\"/host/var/log/aws-routed-eni\",\"name\":\"log-dir\"},{\"mountPath\":\"/var/run/aws-node\",\"name\":\"run-dir\"},{\"mountPath\":\"/var/run/dockershim.sock\",\"name\":\"dockershim\"},{\"mountPath\":\"/run/xtables.lock\",\"name\":\"xtables-lock\"}]}],\"hostNetwork\":true,\"initContainers\":[{\"env\":[{\"name\":\"DISABLE_TCP_EARLY_DEMUX\",\"value\":\"false\"},{\"name\":\"ENABLE_IPv6\",\"value\":\"false\"}],\"image\":\"602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1\",\"name\":\"aws-vpc-cni-init\",\"securityContext\":{\"privileged\":true},\"volumeMounts\":[{\"mountPath\":\"/host/opt/cni/bin\",\"name\":\"cni-bin-dir\"}]}],\"priorityClassName\":\"system-node-critical\",\"serviceAccountName\":\"aws-node\",\"terminationGracePeriodSeconds\":10,\"tolerations\":[{\"operator\":\"Exists\"}],\"volumes\":[{\"hostPath\":{\"path\":\"/opt/cni/bin\"},\"name\":\"cni-bin-dir\"},{\"hostPath\":{\"path\":\"/etc/cni/net.d\"},\"name\":\"cni-net-dir\"},{\"hostPath\":{\"path\":\"/var/run/dockershim.sock\"},\"name\":\"dockershim\"},{\"hostPath\":{\"path\":\"/run/xtables.lock\"},\"name\":\"xtables-lock\"},{\"hostPath\":{\"path\":\"/var/log/aws-routed-eni\",\"type\":\"DirectoryOrCreate\"},\"name\":\"log-dir\"},{\"hostPath\":{\"path\":\"/var/run/aws-node\",\"type\":\"DirectoryOrCreate\"},\"name\":\"run-dir\"}]}},\"updateStrategy\":{\"rollingUpdate\":{\"maxUnavailable\":\"10%\"},\"type\":\"RollingUpdate\"}}}\n"
+                }
+            },
+            "spec": {
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "aws-node"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app.kubernetes.io/name": "aws-node",
+                            "k8s-app": "aws-node"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "cni-bin-dir",
+                                "hostPath": {
+                                    "path": "/opt/cni/bin",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "cni-net-dir",
+                                "hostPath": {
+                                    "path": "/etc/cni/net.d",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "dockershim",
+                                "hostPath": {
+                                    "path": "/var/run/dockershim.sock",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "log-dir",
+                                "hostPath": {
+                                    "path": "/var/log/aws-routed-eni",
+                                    "type": "DirectoryOrCreate"
+                                }
+                            },
+                            {
+                                "name": "run-dir",
+                                "hostPath": {
+                                    "path": "/var/run/aws-node",
+                                    "type": "DirectoryOrCreate"
+                                }
+                            },
+                            {
+                                "name": "xtables-lock",
+                                "hostPath": {
+                                    "path": "/run/xtables.lock",
+                                    "type": ""
+                                }
+                            }
+                        ],
+                        "initContainers": [
+                            {
+                                "name": "aws-vpc-cni-init",
+                                "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1",
+                                "env": [
+                                    {
+                                        "name": "DISABLE_TCP_EARLY_DEMUX",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "ENABLE_IPv6",
+                                        "value": "false"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "cni-bin-dir",
+                                        "mountPath": "/host/opt/cni/bin"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "privileged": true
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "aws-node",
+                                "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1",
+                                "ports": [
+                                    {
+                                        "name": "metrics",
+                                        "hostPort": 61678,
+                                        "containerPort": 61678,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "ADDITIONAL_ENI_TAGS",
+                                        "value": "{}"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_CNI_NODE_PORT_SUPPORT",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_ENI_MTU",
+                                        "value": "9001"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_CONFIGURE_RPFILTER",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_EXTERNALSNAT",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_LOGLEVEL",
+                                        "value": "DEBUG"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_LOG_FILE",
+                                        "value": "/host/var/log/aws-routed-eni/ipamd.log"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_RANDOMIZESNAT",
+                                        "value": "prng"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_CNI_VETHPREFIX",
+                                        "value": "eni"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_PLUGIN_LOG_FILE",
+                                        "value": "/var/log/aws-routed-eni/plugin.log"
+                                    },
+                                    {
+                                        "name": "AWS_VPC_K8S_PLUGIN_LOG_LEVEL",
+                                        "value": "DEBUG"
+                                    },
+                                    {
+                                        "name": "DISABLE_INTROSPECTION",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "DISABLE_METRICS",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "DISABLE_NETWORK_RESOURCE_PROVISIONING",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "ENABLE_IPv4",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "name": "ENABLE_IPv6",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "ENABLE_POD_ENI",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "ENABLE_PREFIX_DELEGATION",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "name": "MY_NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "WARM_ENI_TARGET",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "name": "WARM_PREFIX_TARGET",
+                                        "value": "1"
+                                    }
+                                ],
+                                "resources": {
+                                    "requests": {
+                                        "cpu": "25m"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "cni-bin-dir",
+                                        "mountPath": "/host/opt/cni/bin"
+                                    },
+                                    {
+                                        "name": "cni-net-dir",
+                                        "mountPath": "/host/etc/cni/net.d"
+                                    },
+                                    {
+                                        "name": "log-dir",
+                                        "mountPath": "/host/var/log/aws-routed-eni"
+                                    },
+                                    {
+                                        "name": "dockershim",
+                                        "mountPath": "/var/run/dockershim.sock"
+                                    },
+                                    {
+                                        "name": "run-dir",
+                                        "mountPath": "/var/run/aws-node"
+                                    },
+                                    {
+                                        "name": "xtables-lock",
+                                        "mountPath": "/run/xtables.lock"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/app/grpc-health-probe",
+                                            "-addr=:50051",
+                                            "-connect-timeout=5s",
+                                            "-rpc-timeout=5s"
+                                        ]
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 10,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "exec": {
+                                        "command": [
+                                            "/app/grpc-health-probe",
+                                            "-addr=:50051",
+                                            "-connect-timeout=5s",
+                                            "-rpc-timeout=5s"
+                                        ]
+                                    },
+                                    "initialDelaySeconds": 1,
+                                    "timeoutSeconds": 10,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_ADMIN"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 10,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "aws-node",
+                        "serviceAccount": "aws-node",
+                        "hostNetwork": true,
+                        "securityContext": {},
+                        "affinity": {
+                            "nodeAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": {
+                                    "nodeSelectorTerms": [
+                                        {
+                                            "matchExpressions": [
+                                                {
+                                                    "key": "kubernetes.io/os",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "linux"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "kubernetes.io/arch",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "amd64",
+                                                        "arm64"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "eks.amazonaws.com/compute-type",
+                                                    "operator": "NotIn",
+                                                    "values": [
+                                                        "fargate"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-node-critical"
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "10%",
+                        "maxSurge": 0
+                    }
+                },
+                "revisionHistoryLimit": 10
+            },
+            "status": {
+                "currentNumberScheduled": 0,
+                "numberMisscheduled": 0,
+                "desiredNumberScheduled": 0,
+                "numberReady": 0,
+                "observedGeneration": 2
+            }
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy",
+                "namespace": "kube-system",
+                "uid": "a095406a-aab9-43d5-af32-65b9f0391cf9",
+                "resourceVersion": "1822",
+                "generation": 1,
+                "creationTimestamp": "2022-09-12T23:17:08Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "kube-proxy",
+                    "k8s-app": "kube-proxy"
+                },
+                "annotations": {
+                    "deprecated.daemonset.template.generation": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"DaemonSet\",\"metadata\":{\"annotations\":{},\"labels\":{\"eks.amazonaws.com/component\":\"kube-proxy\",\"k8s-app\":\"kube-proxy\"},\"name\":\"kube-proxy\",\"namespace\":\"kube-system\"},\"spec\":{\"selector\":{\"matchLabels\":{\"k8s-app\":\"kube-proxy\"}},\"template\":{\"metadata\":{\"labels\":{\"k8s-app\":\"kube-proxy\"}},\"spec\":{\"affinity\":{\"nodeAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":{\"nodeSelectorTerms\":[{\"matchExpressions\":[{\"key\":\"kubernetes.io/os\",\"operator\":\"In\",\"values\":[\"linux\"]},{\"key\":\"kubernetes.io/arch\",\"operator\":\"In\",\"values\":[\"amd64\",\"arm64\"]},{\"key\":\"eks.amazonaws.com/compute-type\",\"operator\":\"NotIn\",\"values\":[\"fargate\"]}]}]}}},\"containers\":[{\"command\":[\"kube-proxy\",\"--v=2\",\"--config=/var/lib/kube-proxy-config/config\",\"--hostname-override=$(NODE_NAME)\"],\"env\":[{\"name\":\"NODE_NAME\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"spec.nodeName\"}}}],\"image\":\"602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1\",\"name\":\"kube-proxy\",\"resources\":{\"requests\":{\"cpu\":\"100m\"}},\"securityContext\":{\"privileged\":true},\"volumeMounts\":[{\"mountPath\":\"/var/log\",\"name\":\"varlog\",\"readOnly\":false},{\"mountPath\":\"/run/xtables.lock\",\"name\":\"xtables-lock\",\"readOnly\":false},{\"mountPath\":\"/lib/modules\",\"name\":\"lib-modules\",\"readOnly\":true},{\"mountPath\":\"/var/lib/kube-proxy/\",\"name\":\"kubeconfig\"},{\"mountPath\":\"/var/lib/kube-proxy-config/\",\"name\":\"config\"}]}],\"hostNetwork\":true,\"priorityClassName\":\"system-node-critical\",\"serviceAccountName\":\"kube-proxy\",\"tolerations\":[{\"operator\":\"Exists\"}],\"volumes\":[{\"hostPath\":{\"path\":\"/var/log\"},\"name\":\"varlog\"},{\"hostPath\":{\"path\":\"/run/xtables.lock\",\"type\":\"FileOrCreate\"},\"name\":\"xtables-lock\"},{\"hostPath\":{\"path\":\"/lib/modules\"},\"name\":\"lib-modules\"},{\"configMap\":{\"name\":\"kube-proxy\"},\"name\":\"kubeconfig\"},{\"configMap\":{\"name\":\"kube-proxy-config\"},\"name\":\"config\"}]}},\"updateStrategy\":{\"rollingUpdate\":{\"maxUnavailable\":\"10%\"},\"type\":\"RollingUpdate\"}}}\n"
+                }
+            },
+            "spec": {
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "kube-proxy"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "k8s-app": "kube-proxy"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "varlog",
+                                "hostPath": {
+                                    "path": "/var/log",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "xtables-lock",
+                                "hostPath": {
+                                    "path": "/run/xtables.lock",
+                                    "type": "FileOrCreate"
+                                }
+                            },
+                            {
+                                "name": "lib-modules",
+                                "hostPath": {
+                                    "path": "/lib/modules",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "kubeconfig",
+                                "configMap": {
+                                    "name": "kube-proxy",
+                                    "defaultMode": 420
+                                }
+                            },
+                            {
+                                "name": "config",
+                                "configMap": {
+                                    "name": "kube-proxy-config",
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "kube-proxy",
+                                "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1",
+                                "command": [
+                                    "kube-proxy",
+                                    "--v=2",
+                                    "--config=/var/lib/kube-proxy-config/config",
+                                    "--hostname-override=$(NODE_NAME)"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "resources": {
+                                    "requests": {
+                                        "cpu": "100m"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "varlog",
+                                        "mountPath": "/var/log"
+                                    },
+                                    {
+                                        "name": "xtables-lock",
+                                        "mountPath": "/run/xtables.lock"
+                                    },
+                                    {
+                                        "name": "lib-modules",
+                                        "readOnly": true,
+                                        "mountPath": "/lib/modules"
+                                    },
+                                    {
+                                        "name": "kubeconfig",
+                                        "mountPath": "/var/lib/kube-proxy/"
+                                    },
+                                    {
+                                        "name": "config",
+                                        "mountPath": "/var/lib/kube-proxy-config/"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "privileged": true
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "kube-proxy",
+                        "serviceAccount": "kube-proxy",
+                        "hostNetwork": true,
+                        "securityContext": {},
+                        "affinity": {
+                            "nodeAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": {
+                                    "nodeSelectorTerms": [
+                                        {
+                                            "matchExpressions": [
+                                                {
+                                                    "key": "kubernetes.io/os",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "linux"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "kubernetes.io/arch",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "amd64",
+                                                        "arm64"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "eks.amazonaws.com/compute-type",
+                                                    "operator": "NotIn",
+                                                    "values": [
+                                                        "fargate"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-node-critical"
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "10%",
+                        "maxSurge": 0
+                    }
+                },
+                "revisionHistoryLimit": 10
+            },
+            "status": {
+                "currentNumberScheduled": 0,
+                "numberMisscheduled": 0,
+                "desiredNumberScheduled": 0,
+                "numberReady": 0,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns",
+                "namespace": "kube-system",
+                "uid": "e861db43-66b3-45b5-b3cf-e683269734a6",
+                "resourceVersion": "2031",
+                "generation": 1,
+                "creationTimestamp": "2022-09-12T23:17:07Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "coredns",
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/name": "CoreDNS"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"labels\":{\"eks.amazonaws.com/component\":\"coredns\",\"k8s-app\":\"kube-dns\",\"kubernetes.io/name\":\"CoreDNS\"},\"name\":\"coredns\",\"namespace\":\"kube-system\"},\"spec\":{\"replicas\":2,\"selector\":{\"matchLabels\":{\"eks.amazonaws.com/component\":\"coredns\",\"k8s-app\":\"kube-dns\"}},\"strategy\":{\"rollingUpdate\":{\"maxUnavailable\":1},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"annotations\":{\"eks.amazonaws.com/compute-type\":\"ec2\"},\"labels\":{\"eks.amazonaws.com/component\":\"coredns\",\"k8s-app\":\"kube-dns\"}},\"spec\":{\"affinity\":{\"nodeAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":{\"nodeSelectorTerms\":[{\"matchExpressions\":[{\"key\":\"beta.kubernetes.io/os\",\"operator\":\"In\",\"values\":[\"linux\"]},{\"key\":\"beta.kubernetes.io/arch\",\"operator\":\"In\",\"values\":[\"amd64\",\"arm64\"]}]}]}},\"podAntiAffinity\":{\"preferredDuringSchedulingIgnoredDuringExecution\":[{\"podAffinityTerm\":{\"labelSelector\":{\"matchExpressions\":[{\"key\":\"k8s-app\",\"operator\":\"In\",\"values\":[\"kube-dns\"]}]},\"topologyKey\":\"kubernetes.io/hostname\"},\"weight\":100}]}},\"containers\":[{\"args\":[\"-conf\",\"/etc/coredns/Corefile\"],\"image\":\"602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"failureThreshold\":5,\"httpGet\":{\"path\":\"/health\",\"port\":8080,\"scheme\":\"HTTP\"},\"initialDelaySeconds\":60,\"successThreshold\":1,\"timeoutSeconds\":5},\"name\":\"coredns\",\"ports\":[{\"containerPort\":53,\"name\":\"dns\",\"protocol\":\"UDP\"},{\"containerPort\":53,\"name\":\"dns-tcp\",\"protocol\":\"TCP\"},{\"containerPort\":9153,\"name\":\"metrics\",\"protocol\":\"TCP\"}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/health\",\"port\":8080,\"scheme\":\"HTTP\"}},\"resources\":{\"limits\":{\"memory\":\"170Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"70Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"add\":[\"NET_BIND_SERVICE\"],\"drop\":[\"all\"]},\"readOnlyRootFilesystem\":true},\"volumeMounts\":[{\"mountPath\":\"/etc/coredns\",\"name\":\"config-volume\",\"readOnly\":true},{\"mountPath\":\"/tmp\",\"name\":\"tmp\"}]}],\"dnsPolicy\":\"Default\",\"priorityClassName\":\"system-cluster-critical\",\"serviceAccountName\":\"coredns\",\"tolerations\":[{\"effect\":\"NoSchedule\",\"key\":\"node-role.kubernetes.io/master\"},{\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}],\"volumes\":[{\"emptyDir\":{},\"name\":\"tmp\"},{\"configMap\":{\"items\":[{\"key\":\"Corefile\",\"path\":\"Corefile\"}],\"name\":\"coredns\"},\"name\":\"config-volume\"}]}}}}\n"
+                }
+            },
+            "spec": {
+                "replicas": 2,
+                "selector": {
+                    "matchLabels": {
+                        "eks.amazonaws.com/component": "coredns",
+                        "k8s-app": "kube-dns"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "eks.amazonaws.com/component": "coredns",
+                            "k8s-app": "kube-dns"
+                        },
+                        "annotations": {
+                            "eks.amazonaws.com/compute-type": "ec2"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "tmp",
+                                "emptyDir": {}
+                            },
+                            {
+                                "name": "config-volume",
+                                "configMap": {
+                                    "name": "coredns",
+                                    "items": [
+                                        {
+                                            "key": "Corefile",
+                                            "path": "Corefile"
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "coredns",
+                                "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1",
+                                "args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "dns",
+                                        "containerPort": 53,
+                                        "protocol": "UDP"
+                                    },
+                                    {
+                                        "name": "dns-tcp",
+                                        "containerPort": 53,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "name": "metrics",
+                                        "containerPort": 9153,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "limits": {
+                                        "memory": "170Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "70Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns"
+                                    },
+                                    {
+                                        "name": "tmp",
+                                        "mountPath": "/tmp"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 5,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "drop": [
+                                            "all"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "Default",
+                        "serviceAccountName": "coredns",
+                        "serviceAccount": "coredns",
+                        "securityContext": {},
+                        "affinity": {
+                            "nodeAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": {
+                                    "nodeSelectorTerms": [
+                                        {
+                                            "matchExpressions": [
+                                                {
+                                                    "key": "beta.kubernetes.io/os",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "linux"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "beta.kubernetes.io/arch",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "amd64",
+                                                        "arm64"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "podAntiAffinity": {
+                                "preferredDuringSchedulingIgnoredDuringExecution": [
+                                    {
+                                        "weight": 100,
+                                        "podAffinityTerm": {
+                                            "labelSelector": {
+                                                "matchExpressions": [
+                                                    {
+                                                        "key": "k8s-app",
+                                                        "operator": "In",
+                                                        "values": [
+                                                            "kube-dns"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "topologyKey": "kubernetes.io/hostname"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical"
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": 1,
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 1,
+                "replicas": 2,
+                "updatedReplicas": 2,
+                "unavailableReplicas": 2,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-12T23:17:11Z",
+                        "lastTransitionTime": "2022-09-12T23:17:11Z",
+                        "reason": "MinimumReplicasUnavailable",
+                        "message": "Deployment does not have minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-12T23:27:12Z",
+                        "lastTransitionTime": "2022-09-12T23:27:12Z",
+                        "reason": "ProgressDeadlineExceeded",
+                        "message": "ReplicaSet \"coredns-657694c6f4\" has timed out progressing."
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-657694c6f4",
+                "namespace": "kube-system",
+                "uid": "7292093d-8c50-40fd-9f78-e90228a27114",
+                "resourceVersion": "455",
+                "generation": 1,
+                "creationTimestamp": "2022-09-12T23:17:11Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "coredns",
+                    "k8s-app": "kube-dns",
+                    "pod-template-hash": "657694c6f4"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "2",
+                    "deployment.kubernetes.io/max-replicas": "3",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "coredns",
+                        "uid": "e861db43-66b3-45b5-b3cf-e683269734a6",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 2,
+                "selector": {
+                    "matchLabels": {
+                        "eks.amazonaws.com/component": "coredns",
+                        "k8s-app": "kube-dns",
+                        "pod-template-hash": "657694c6f4"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "eks.amazonaws.com/component": "coredns",
+                            "k8s-app": "kube-dns",
+                            "pod-template-hash": "657694c6f4"
+                        },
+                        "annotations": {
+                            "eks.amazonaws.com/compute-type": "ec2"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "tmp",
+                                "emptyDir": {}
+                            },
+                            {
+                                "name": "config-volume",
+                                "configMap": {
+                                    "name": "coredns",
+                                    "items": [
+                                        {
+                                            "key": "Corefile",
+                                            "path": "Corefile"
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "coredns",
+                                "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1",
+                                "args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "dns",
+                                        "containerPort": 53,
+                                        "protocol": "UDP"
+                                    },
+                                    {
+                                        "name": "dns-tcp",
+                                        "containerPort": 53,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "name": "metrics",
+                                        "containerPort": 9153,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "limits": {
+                                        "memory": "170Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "70Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns"
+                                    },
+                                    {
+                                        "name": "tmp",
+                                        "mountPath": "/tmp"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 5,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "drop": [
+                                            "all"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "Default",
+                        "serviceAccountName": "coredns",
+                        "serviceAccount": "coredns",
+                        "securityContext": {},
+                        "affinity": {
+                            "nodeAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": {
+                                    "nodeSelectorTerms": [
+                                        {
+                                            "matchExpressions": [
+                                                {
+                                                    "key": "beta.kubernetes.io/os",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "linux"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "beta.kubernetes.io/arch",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "amd64",
+                                                        "arm64"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "podAntiAffinity": {
+                                "preferredDuringSchedulingIgnoredDuringExecution": [
+                                    {
+                                        "weight": 100,
+                                        "podAffinityTerm": {
+                                            "labelSelector": {
+                                                "matchExpressions": [
+                                                    {
+                                                        "key": "k8s-app",
+                                                        "operator": "In",
+                                                        "values": [
+                                                            "kube-dns"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "topologyKey": "kubernetes.io/hostname"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 2,
+                "fullyLabeledReplicas": 2,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-657694c6f4-gf8sg",
+                "generateName": "coredns-657694c6f4-",
+                "namespace": "kube-system",
+                "uid": "373a1c5a-7ff3-4782-a7f3-ffa50ea9cfb8",
+                "resourceVersion": "453",
+                "creationTimestamp": "2022-09-12T23:17:11Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "coredns",
+                    "k8s-app": "kube-dns",
+                    "pod-template-hash": "657694c6f4"
+                },
+                "annotations": {
+                    "eks.amazonaws.com/compute-type": "ec2",
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "coredns-657694c6f4",
+                        "uid": "7292093d-8c50-40fd-9f78-e90228a27114",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "tmp",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "config-volume",
+                        "configMap": {
+                            "name": "coredns",
+                            "items": [
+                                {
+                                    "key": "Corefile",
+                                    "path": "Corefile"
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-fhkcj",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "coredns",
+                        "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1",
+                        "args": [
+                            "-conf",
+                            "/etc/coredns/Corefile"
+                        ],
+                        "ports": [
+                            {
+                                "name": "dns",
+                                "containerPort": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "name": "dns-tcp",
+                                "containerPort": 53,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "metrics",
+                                "containerPort": 9153,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "memory": "170Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "70Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "readOnly": true,
+                                "mountPath": "/etc/coredns"
+                            },
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-fhkcj",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 60,
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 5
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_BIND_SERVICE"
+                                ],
+                                "drop": [
+                                    "all"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "Default",
+                "serviceAccountName": "coredns",
+                "serviceAccount": "coredns",
+                "securityContext": {},
+                "affinity": {
+                    "nodeAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": {
+                            "nodeSelectorTerms": [
+                                {
+                                    "matchExpressions": [
+                                        {
+                                            "key": "beta.kubernetes.io/os",
+                                            "operator": "In",
+                                            "values": [
+                                                "linux"
+                                            ]
+                                        },
+                                        {
+                                            "key": "beta.kubernetes.io/arch",
+                                            "operator": "In",
+                                            "values": [
+                                                "amd64",
+                                                "arm64"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "podAntiAffinity": {
+                        "preferredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "weight": 100,
+                                "podAffinityTerm": {
+                                    "labelSelector": {
+                                        "matchExpressions": [
+                                            {
+                                                "key": "k8s-app",
+                                                "operator": "In",
+                                                "values": [
+                                                    "kube-dns"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "topologyKey": "kubernetes.io/hostname"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node-role.kubernetes.io/master",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "CriticalAddonsOnly",
+                        "operator": "Exists"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:17:11Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        },
+        {
+            "metadata": {
+                "name": "coredns-657694c6f4-vkgpl",
+                "generateName": "coredns-657694c6f4-",
+                "namespace": "kube-system",
+                "uid": "45cfc4c9-4af6-432d-a14c-62244a08bd48",
+                "resourceVersion": "452",
+                "creationTimestamp": "2022-09-12T23:17:11Z",
+                "labels": {
+                    "eks.amazonaws.com/component": "coredns",
+                    "k8s-app": "kube-dns",
+                    "pod-template-hash": "657694c6f4"
+                },
+                "annotations": {
+                    "eks.amazonaws.com/compute-type": "ec2",
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "coredns-657694c6f4",
+                        "uid": "7292093d-8c50-40fd-9f78-e90228a27114",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "tmp",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "config-volume",
+                        "configMap": {
+                            "name": "coredns",
+                            "items": [
+                                {
+                                    "key": "Corefile",
+                                    "path": "Corefile"
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-md559",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "coredns",
+                        "image": "602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1",
+                        "args": [
+                            "-conf",
+                            "/etc/coredns/Corefile"
+                        ],
+                        "ports": [
+                            {
+                                "name": "dns",
+                                "containerPort": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "name": "dns-tcp",
+                                "containerPort": 53,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "metrics",
+                                "containerPort": 9153,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "memory": "170Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "70Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "readOnly": true,
+                                "mountPath": "/etc/coredns"
+                            },
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-md559",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 60,
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 5
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_BIND_SERVICE"
+                                ],
+                                "drop": [
+                                    "all"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "Default",
+                "serviceAccountName": "coredns",
+                "serviceAccount": "coredns",
+                "securityContext": {},
+                "affinity": {
+                    "nodeAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": {
+                            "nodeSelectorTerms": [
+                                {
+                                    "matchExpressions": [
+                                        {
+                                            "key": "beta.kubernetes.io/os",
+                                            "operator": "In",
+                                            "values": [
+                                                "linux"
+                                            ]
+                                        },
+                                        {
+                                            "key": "beta.kubernetes.io/arch",
+                                            "operator": "In",
+                                            "values": [
+                                                "amd64",
+                                                "arm64"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "podAntiAffinity": {
+                        "preferredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "weight": 100,
+                                "podAffinityTerm": {
+                                    "labelSelector": {
+                                        "matchExpressions": [
+                                            {
+                                                "key": "k8s-app",
+                                                "operator": "In",
+                                                "values": [
+                                                    "kube-dns"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "topologyKey": "kubernetes.io/hostname"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node-role.kubernetes.io/master",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "CriticalAddonsOnly",
+                        "operator": "Exists"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:17:11Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        }
+    ]
+}
+==== START logs for container coredns of pod kube-system/coredns-657694c6f4-gf8sg ====
+==== END logs for container coredns of pod kube-system/coredns-657694c6f4-gf8sg ====
+==== START logs for container coredns of pod kube-system/coredns-657694c6f4-vkgpl ====
+==== END logs for container coredns of pod kube-system/coredns-657694c6f4-vkgpl ====
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "my-nginx-c54945c55-mt7h9.171536b6630035be",
+                "namespace": "default",
+                "uid": "bdc511ed-abbf-4197-937b-ebde98314c87",
+                "resourceVersion": "728462",
+                "creationTimestamp": "2022-09-16T02:36:34Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "my-nginx-c54945c55-mt7h9",
+                "uid": "770c9bf0-db08-4266-bf96-c4ae74238cac",
+                "apiVersion": "v1",
+                "resourceVersion": "643829"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-16T02:36:34Z",
+            "lastTimestamp": "2022-09-16T13:42:03Z",
+            "count": 652,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-7trcc.1714c1461b155389",
+                "namespace": "default",
+                "uid": "6bd93626-d99a-44f2-9695-6261cbffc6b0",
+                "resourceVersion": "728848",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "sample-dep-5957b459c-7trcc",
+                "uid": "e5a156c5-d3f6-4be5-bca2-27cc4c07a937",
+                "apiVersion": "v1",
+                "resourceVersion": "7029"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:45:03Z",
+            "count": 2765,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-nsk2n.1714c1461b16e7ea",
+                "namespace": "default",
+                "uid": "cb20a006-cbf2-42b2-801b-037aba2467f2",
+                "resourceVersion": "728781",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "sample-dep-5957b459c-nsk2n",
+                "uid": "469b4bd6-0235-4eb0-8760-c22a3f5238a4",
+                "apiVersion": "v1",
+                "resourceVersion": "7020"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:44:33Z",
+            "count": 2764,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-v6hqk.1714c1461b17c911",
+                "namespace": "default",
+                "uid": "edfc18ee-ccc8-4d43-8041-9d4dc1f764f5",
+                "resourceVersion": "728782",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "sample-dep-5957b459c-v6hqk",
+                "uid": "dcd39e0b-c800-46d3-8d7f-cc099febc521",
+                "apiVersion": "v1",
+                "resourceVersion": "7014"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:44:33Z",
+            "count": 2764,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-wx2jb.1714c1461b188f0c",
+                "namespace": "default",
+                "uid": "dadb9873-2564-40a3-a249-731e9e7960be",
+                "resourceVersion": "728783",
+                "creationTimestamp": "2022-09-14T14:44:29Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "sample-dep-5957b459c-wx2jb",
+                "uid": "d759bc54-48b4-4663-adf0-f90c5fe19ee0",
+                "apiVersion": "v1",
+                "resourceVersion": "7023"
+            },
+            "reason": "FailedScheduling",
+            "message": "no nodes available to schedule pods",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-09-14T14:44:29Z",
+            "lastTimestamp": "2022-09-16T13:44:33Z",
+            "count": 2764,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": []
+}
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kubernetes",
+                "namespace": "default",
+                "uid": "dd6efdca-f0ba-47b9-a92d-72bfc1c27f8c",
+                "resourceVersion": "202",
+                "creationTimestamp": "2022-09-12T23:17:01Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 443
+                    }
+                ],
+                "clusterIP": "10.100.0.1",
+                "clusterIPs": [
+                    "10.100.0.1"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-svc",
+                "namespace": "default",
+                "uid": "3b5e89ed-93d0-4164-8ec9-409804099e1d",
+                "resourceVersion": "7063",
+                "creationTimestamp": "2022-09-12T23:58:43Z",
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"sample-svc\",\"namespace\":\"default\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"sample\":\"color\"},\"type\":\"LoadBalancer\"}}\n"
+                },
+                "finalizers": [
+                    "service.kubernetes.io/load-balancer-cleanup"
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 31363
+                    }
+                ],
+                "selector": {
+                    "sample": "color"
+                },
+                "clusterIP": "10.100.104.119",
+                "clusterIPs": [
+                    "10.100.104.119"
+                ],
+                "type": "LoadBalancer",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "allocateLoadBalancerNodePorts": true,
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {
+                    "ingress": [
+                        {
+                            "hostname": "a3b5e89ed93d041648ec9409804099e1-583867686.us-west-2.elb.amazonaws.com"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": []
+}
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "my-nginx",
+                "namespace": "default",
+                "uid": "fa341c18-089b-468e-b14d-51872261604f",
+                "resourceVersion": "645117",
+                "generation": 1,
+                "creationTimestamp": "2022-09-16T02:36:34Z",
+                "labels": {
+                    "app": "my-nginx"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1"
+                }
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "my-nginx"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "my-nginx"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "nginx",
+                                "image": "nginx",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "Always"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "25%",
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 1,
+                "replicas": 1,
+                "updatedReplicas": 1,
+                "unavailableReplicas": 1,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-16T02:36:34Z",
+                        "lastTransitionTime": "2022-09-16T02:36:34Z",
+                        "reason": "MinimumReplicasUnavailable",
+                        "message": "Deployment does not have minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-16T02:46:35Z",
+                        "lastTransitionTime": "2022-09-16T02:46:35Z",
+                        "reason": "ProgressDeadlineExceeded",
+                        "message": "ReplicaSet \"my-nginx-c54945c55\" has timed out progressing."
+                    }
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep",
+                "namespace": "default",
+                "uid": "a64f800e-e0a7-4457-8569-a12dec2af66a",
+                "resourceVersion": "8644",
+                "generation": 1,
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"sample-dep\",\"namespace\":\"default\"},\"spec\":{\"replicas\":4,\"selector\":{\"matchLabels\":{\"sample\":\"color\"}},\"template\":{\"metadata\":{\"labels\":{\"color\":\"blue\",\"sample\":\"color\"},\"name\":\"sample-color-pod\"},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"NODE_IP\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"status.hostIP\"}}},{\"name\":\"NODE_NAME\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"spec.nodeName\"}}},{\"name\":\"POD_NAMESPACE\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"metadata.namespace\"}}},{\"name\":\"POD_SERVICE_ACCOUNT\",\"valueFrom\":{\"fieldRef\":{\"fieldPath\":\"spec.serviceAccountName\"}}},{\"name\":\"POD_CPU_REQUEST\",\"valueFrom\":{\"resourceFieldRef\":{\"containerName\":\"nginxcolordemo\",\"resource\":\"requests.cpu\"}}},{\"name\":\"POD_CPU_LIMIT\",\"valueFrom\":{\"resourceFieldRef\":{\"containerName\":\"nginxcolordemo\",\"resource\":\"limits.cpu\"}}},{\"name\":\"POD_MEM_REQUEST\",\"valueFrom\":{\"resourceFieldRef\":{\"containerName\":\"nginxcolordemo\",\"resource\":\"requests.memory\"}}},{\"name\":\"POD_MEM_LIMIT\",\"valueFrom\":{\"resourceFieldRef\":{\"containerName\":\"nginxcolordemo\",\"resource\":\"limits.memory\"}}}],\"image\":\"scubakiz/nginxcolordemo:blue-1.0\",\"name\":\"nginxcolordemo\",\"ports\":[{\"containerPort\":80,\"protocol\":\"TCP\"}],\"volumeMounts\":[{\"mountPath\":\"/etc/podinfo\",\"name\":\"podinfo\"}]}],\"nodeSelector\":{\"kubernetes.io/os\":\"linux\"},\"volumes\":[{\"downwardAPI\":{\"items\":[{\"fieldRef\":{\"fieldPath\":\"metadata.labels\"},\"path\":\"labels\"},{\"fieldRef\":{\"fieldPath\":\"metadata.annotations\"},\"path\":\"annotations\"}]},\"name\":\"podinfo\"}]}}}}\n"
+                }
+            },
+            "spec": {
+                "replicas": 4,
+                "selector": {
+                    "matchLabels": {
+                        "sample": "color"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "name": "sample-color-pod",
+                        "creationTimestamp": null,
+                        "labels": {
+                            "color": "blue",
+                            "sample": "color"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "podinfo",
+                                "downwardAPI": {
+                                    "items": [
+                                        {
+                                            "path": "labels",
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.labels"
+                                            }
+                                        },
+                                        {
+                                            "path": "annotations",
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.annotations"
+                                            }
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "nginxcolordemo",
+                                "image": "scubakiz/nginxcolordemo:blue-1.0",
+                                "ports": [
+                                    {
+                                        "containerPort": 80,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "NODE_IP",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "status.hostIP"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_NAMESPACE",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_SERVICE_ACCOUNT",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.serviceAccountName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_CPU_REQUEST",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "requests.cpu",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_CPU_LIMIT",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "limits.cpu",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_MEM_REQUEST",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "requests.memory",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_MEM_LIMIT",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "limits.memory",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "podinfo",
+                                        "mountPath": "/etc/podinfo"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "25%",
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 1,
+                "replicas": 4,
+                "updatedReplicas": 4,
+                "unavailableReplicas": 4,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-12T23:58:37Z",
+                        "lastTransitionTime": "2022-09-12T23:58:37Z",
+                        "reason": "MinimumReplicasUnavailable",
+                        "message": "Deployment does not have minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "False",
+                        "lastUpdateTime": "2022-09-13T00:08:38Z",
+                        "lastTransitionTime": "2022-09-13T00:08:38Z",
+                        "reason": "ProgressDeadlineExceeded",
+                        "message": "ReplicaSet \"sample-dep-5957b459c\" has timed out progressing."
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "my-nginx-c54945c55",
+                "namespace": "default",
+                "uid": "d283d960-e1b6-4224-8d97-d17663f4017f",
+                "resourceVersion": "643833",
+                "generation": 1,
+                "creationTimestamp": "2022-09-16T02:36:34Z",
+                "labels": {
+                    "app": "my-nginx",
+                    "pod-template-hash": "c54945c55"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "my-nginx",
+                        "uid": "fa341c18-089b-468e-b14d-51872261604f",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "my-nginx",
+                        "pod-template-hash": "c54945c55"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "my-nginx",
+                            "pod-template-hash": "c54945c55"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "nginx",
+                                "image": "nginx",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "Always"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c",
+                "namespace": "default",
+                "uid": "7ad54dc5-aafd-468b-a4a1-d9eac2a788b3",
+                "resourceVersion": "7030",
+                "generation": 1,
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "labels": {
+                    "color": "blue",
+                    "pod-template-hash": "5957b459c",
+                    "sample": "color"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "4",
+                    "deployment.kubernetes.io/max-replicas": "5",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "sample-dep",
+                        "uid": "a64f800e-e0a7-4457-8569-a12dec2af66a",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 4,
+                "selector": {
+                    "matchLabels": {
+                        "pod-template-hash": "5957b459c",
+                        "sample": "color"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "name": "sample-color-pod",
+                        "creationTimestamp": null,
+                        "labels": {
+                            "color": "blue",
+                            "pod-template-hash": "5957b459c",
+                            "sample": "color"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "podinfo",
+                                "downwardAPI": {
+                                    "items": [
+                                        {
+                                            "path": "labels",
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.labels"
+                                            }
+                                        },
+                                        {
+                                            "path": "annotations",
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.annotations"
+                                            }
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "nginxcolordemo",
+                                "image": "scubakiz/nginxcolordemo:blue-1.0",
+                                "ports": [
+                                    {
+                                        "containerPort": 80,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "NODE_IP",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "status.hostIP"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_NAMESPACE",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_SERVICE_ACCOUNT",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.serviceAccountName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_CPU_REQUEST",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "requests.cpu",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_CPU_LIMIT",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "limits.cpu",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_MEM_REQUEST",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "requests.memory",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "POD_MEM_LIMIT",
+                                        "valueFrom": {
+                                            "resourceFieldRef": {
+                                                "containerName": "nginxcolordemo",
+                                                "resource": "limits.memory",
+                                                "divisor": "0"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "podinfo",
+                                        "mountPath": "/etc/podinfo"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 4,
+                "fullyLabeledReplicas": 4,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "728985"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "my-nginx-c54945c55-mt7h9",
+                "generateName": "my-nginx-c54945c55-",
+                "namespace": "default",
+                "uid": "770c9bf0-db08-4266-bf96-c4ae74238cac",
+                "resourceVersion": "643834",
+                "creationTimestamp": "2022-09-16T02:36:34Z",
+                "labels": {
+                    "app": "my-nginx",
+                    "pod-template-hash": "c54945c55"
+                },
+                "annotations": {
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "my-nginx-c54945c55",
+                        "uid": "d283d960-e1b6-4224-8d97-d17663f4017f",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "kube-api-access-x9w6x",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "nginx",
+                        "image": "nginx",
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "kube-api-access-x9w6x",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "Always"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-16T02:36:34Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-7trcc",
+                "generateName": "sample-dep-5957b459c-",
+                "namespace": "default",
+                "uid": "e5a156c5-d3f6-4be5-bca2-27cc4c07a937",
+                "resourceVersion": "7029",
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "labels": {
+                    "color": "blue",
+                    "pod-template-hash": "5957b459c",
+                    "sample": "color"
+                },
+                "annotations": {
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "sample-dep-5957b459c",
+                        "uid": "7ad54dc5-aafd-468b-a4a1-d9eac2a788b3",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "podinfo",
+                        "downwardAPI": {
+                            "items": [
+                                {
+                                    "path": "labels",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.labels"
+                                    }
+                                },
+                                {
+                                    "path": "annotations",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.annotations"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-tn8ng",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "nginxcolordemo",
+                        "image": "scubakiz/nginxcolordemo:blue-1.0",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "NODE_IP",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.hostIP"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_SERVICE_ACCOUNT",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "podinfo",
+                                "mountPath": "/etc/podinfo"
+                            },
+                            {
+                                "name": "kube-api-access-tn8ng",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:58:37Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-nsk2n",
+                "generateName": "sample-dep-5957b459c-",
+                "namespace": "default",
+                "uid": "469b4bd6-0235-4eb0-8760-c22a3f5238a4",
+                "resourceVersion": "7020",
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "labels": {
+                    "color": "blue",
+                    "pod-template-hash": "5957b459c",
+                    "sample": "color"
+                },
+                "annotations": {
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "sample-dep-5957b459c",
+                        "uid": "7ad54dc5-aafd-468b-a4a1-d9eac2a788b3",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "podinfo",
+                        "downwardAPI": {
+                            "items": [
+                                {
+                                    "path": "labels",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.labels"
+                                    }
+                                },
+                                {
+                                    "path": "annotations",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.annotations"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-hm2w6",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "nginxcolordemo",
+                        "image": "scubakiz/nginxcolordemo:blue-1.0",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "NODE_IP",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.hostIP"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_SERVICE_ACCOUNT",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "podinfo",
+                                "mountPath": "/etc/podinfo"
+                            },
+                            {
+                                "name": "kube-api-access-hm2w6",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:58:37Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-v6hqk",
+                "generateName": "sample-dep-5957b459c-",
+                "namespace": "default",
+                "uid": "dcd39e0b-c800-46d3-8d7f-cc099febc521",
+                "resourceVersion": "7014",
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "labels": {
+                    "color": "blue",
+                    "pod-template-hash": "5957b459c",
+                    "sample": "color"
+                },
+                "annotations": {
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "sample-dep-5957b459c",
+                        "uid": "7ad54dc5-aafd-468b-a4a1-d9eac2a788b3",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "podinfo",
+                        "downwardAPI": {
+                            "items": [
+                                {
+                                    "path": "labels",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.labels"
+                                    }
+                                },
+                                {
+                                    "path": "annotations",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.annotations"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-lvmt8",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "nginxcolordemo",
+                        "image": "scubakiz/nginxcolordemo:blue-1.0",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "NODE_IP",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.hostIP"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_SERVICE_ACCOUNT",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "podinfo",
+                                "mountPath": "/etc/podinfo"
+                            },
+                            {
+                                "name": "kube-api-access-lvmt8",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:58:37Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        },
+        {
+            "metadata": {
+                "name": "sample-dep-5957b459c-wx2jb",
+                "generateName": "sample-dep-5957b459c-",
+                "namespace": "default",
+                "uid": "d759bc54-48b4-4663-adf0-f90c5fe19ee0",
+                "resourceVersion": "7023",
+                "creationTimestamp": "2022-09-12T23:58:37Z",
+                "labels": {
+                    "color": "blue",
+                    "pod-template-hash": "5957b459c",
+                    "sample": "color"
+                },
+                "annotations": {
+                    "kubernetes.io/psp": "eks.privileged"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "sample-dep-5957b459c",
+                        "uid": "7ad54dc5-aafd-468b-a4a1-d9eac2a788b3",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "podinfo",
+                        "downwardAPI": {
+                            "items": [
+                                {
+                                    "path": "labels",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.labels"
+                                    }
+                                },
+                                {
+                                    "path": "annotations",
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.annotations"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-q64sn",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "nginxcolordemo",
+                        "image": "scubakiz/nginxcolordemo:blue-1.0",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "NODE_IP",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.hostIP"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_SERVICE_ACCOUNT",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_CPU_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.cpu",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_REQUEST",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "requests.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_MEM_LIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "containerName": "nginxcolordemo",
+                                        "resource": "limits.memory",
+                                        "divisor": "0"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "podinfo",
+                                "mountPath": "/etc/podinfo"
+                            },
+                            {
+                                "name": "kube-api-access-q64sn",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Pending",
+                "conditions": [
+                    {
+                        "type": "PodScheduled",
+                        "status": "False",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-09-12T23:58:37Z",
+                        "reason": "Unschedulable",
+                        "message": "no nodes available to schedule pods"
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        }
+    ]
+}
+==== START logs for container nginx of pod default/my-nginx-c54945c55-mt7h9 ====
+==== END logs for container nginx of pod default/my-nginx-c54945c55-mt7h9 ====
+==== START logs for container nginxcolordemo of pod default/sample-dep-5957b459c-7trcc ====
+==== END logs for container nginxcolordemo of pod default/sample-dep-5957b459c-7trcc ====
+==== START logs for container nginxcolordemo of pod default/sample-dep-5957b459c-nsk2n ====
+==== END logs for container nginxcolordemo of pod default/sample-dep-5957b459c-nsk2n ====
+==== START logs for container nginxcolordemo of pod default/sample-dep-5957b459c-v6hqk ====
+==== END logs for container nginxcolordemo of pod default/sample-dep-5957b459c-v6hqk ====
+==== START logs for container nginxcolordemo of pod default/sample-dep-5957b459c-wx2jb ====
+==== END logs for container nginxcolordemo of pod default/sample-dep-5957b459c-wx2jb ====
